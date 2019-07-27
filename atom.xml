@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-07-27T06:55:41.816Z</updated>
+  <updated>2019-07-27T15:48:07.845Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -17,11 +17,11 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title></title>
+    <title>Nodejs后端语言学习</title>
     <link href="http://yoursite.com/2019/07/27/node_study/"/>
     <id>http://yoursite.com/2019/07/27/node_study/</id>
     <published>2019-07-27T06:53:47.362Z</published>
-    <updated>2019-07-27T06:55:41.816Z</updated>
+    <updated>2019-07-27T15:48:07.845Z</updated>
     
     <summary type="html">
     
@@ -29,13 +29,20 @@
       
         
         
-          &lt;hr&gt;
-&lt;h2 id=&quot;title-Nodejs后端语言学习&quot;&gt;&lt;a href=&quot;#title-Nodejs后端语言学习&quot; class=&quot;headerlink&quot; title=&quot;title: Nodejs后端语言学习&quot;&gt;&lt;/a&gt;title:
+          &lt;h1 id=&quot;·Node-js增删改查文件以及模块化&quot;&gt;&lt;a href=&quot;#·Node-js增删改查文件以及模块化&quot; class=&quot;headerlink&quot; title=&quot;·Node.js增删改查文件以及模块化&quot;&gt;&lt;/a&gt;·Node.js增删改查文件以及模块化&lt;/h1&gt;&lt;h4
         
       
     
     </summary>
     
+      <category term="后端开发" scheme="http://yoursite.com/categories/%E5%90%8E%E7%AB%AF%E5%BC%80%E5%8F%91/"/>
+    
+    
+      <category term="node.js" scheme="http://yoursite.com/tags/node-js/"/>
+    
+      <category term="环境" scheme="http://yoursite.com/tags/%E7%8E%AF%E5%A2%83/"/>
+    
+      <category term="脚本语言" scheme="http://yoursite.com/tags/%E8%84%9A%E6%9C%AC%E8%AF%AD%E8%A8%80/"/>
     
   </entry>
   
@@ -44,7 +51,7 @@
     <link href="http://yoursite.com/2019/07/27/git_study/"/>
     <id>http://yoursite.com/2019/07/27/git_study/</id>
     <published>2019-07-27T06:53:25.450Z</published>
-    <updated>2019-07-27T06:54:52.602Z</updated>
+    <updated>2019-07-27T15:47:58.044Z</updated>
     
     <summary type="html">
     
@@ -58,6 +65,14 @@
     
     </summary>
     
+      <category term="开发工具" scheme="http://yoursite.com/categories/%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7/"/>
+    
+    
+      <category term="github" scheme="http://yoursite.com/tags/github/"/>
+    
+      <category term="开源代码库" scheme="http://yoursite.com/tags/%E5%BC%80%E6%BA%90%E4%BB%A3%E7%A0%81%E5%BA%93/"/>
+    
+      <category term="资源托管" scheme="http://yoursite.com/tags/%E8%B5%84%E6%BA%90%E6%89%98%E7%AE%A1/"/>
     
   </entry>
   
@@ -66,7 +81,7 @@
     <link href="http://yoursite.com/2019/07/27/vue_study/"/>
     <id>http://yoursite.com/2019/07/27/vue_study/</id>
     <published>2019-07-27T05:06:32.005Z</published>
-    <updated>2019-07-27T13:58:42.680Z</updated>
+    <updated>2019-07-27T15:48:09.988Z</updated>
     
     <summary type="html">
     
@@ -80,7 +95,7 @@
     
     </summary>
     
-      <category term="Vue" scheme="http://yoursite.com/categories/Vue/"/>
+      <category term="前端开发" scheme="http://yoursite.com/categories/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/"/>
     
     
       <category term="Vue" scheme="http://yoursite.com/tags/Vue/"/>
