@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Wang peng&#39;s blog</title>
+  
+  <subtitle>大前端开发技术分享</subtitle>
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="http://yoursite.com/"/>
+  <updated>2019-07-27T06:55:41.816Z</updated>
+  <id>http://yoursite.com/</id>
+  
+  <author>
+    <name>Peng Wang</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title></title>
+    <link href="http://yoursite.com/2019/07/27/node_study/"/>
+    <id>http://yoursite.com/2019/07/27/node_study/</id>
+    <published>2019-07-27T06:53:47.362Z</published>
+    <updated>2019-07-27T06:55:41.816Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;hr&gt;
+&lt;h2 id=&quot;title-Nodejs后端语言学习&quot;&gt;&lt;a href=&quot;#title-Nodejs后端语言学习&quot; class=&quot;headerlink&quot; title=&quot;title: Nodejs后端语言学习&quot;&gt;&lt;/a&gt;title:
+        
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>代码托管工具教程-gitHub</title>
+    <link href="http://yoursite.com/2019/07/27/git_study/"/>
+    <id>http://yoursite.com/2019/07/27/git_study/</id>
+    <published>2019-07-27T06:53:25.450Z</published>
+    <updated>2019-07-27T06:54:52.602Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h3 id=&quot;配置使用者的用户名和邮箱-··04-git-config-list查看&quot;&gt;&lt;a href=&quot;#配置使用者的用户名和邮箱-··04-git-config-list查看&quot; class=&quot;headerlink&quot; title=&quot;配置使用者的用户名和邮箱 ··04 git
+        
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>前端最好用的框架-Vue</title>
+    <link href="http://yoursite.com/2019/07/27/vue_study/"/>
+    <id>http://yoursite.com/2019/07/27/vue_study/</id>
+    <published>2019-07-27T05:06:32.005Z</published>
+    <updated>2019-07-27T13:58:42.680Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h4 id=&quot;1、前端三大框架&quot;&gt;&lt;a href=&quot;#1、前端三大框架&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="Vue" scheme="http://yoursite.com/categories/Vue/"/>
+    
+    
+      <category term="Vue" scheme="http://yoursite.com/tags/Vue/"/>
+    
+      <category term="框架" scheme="http://yoursite.com/tags/%E6%A1%86%E6%9E%B6/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Hello World</title>
+    <link href="http://yoursite.com/2019/07/27/hello-world/"/>
+    <id>http://yoursite.com/2019/07/27/hello-world/</id>
+    <published>2019-07-27T05:01:36.007Z</published>
+    <updated>2019-07-27T05:01:36.007Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a
+        
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+</feed>
