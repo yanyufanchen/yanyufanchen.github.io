@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>大前端项目案例展示2D版</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+    <link type="text/css" rel="stylesheet" href="main.css">
+    <link rel=icon href="../logo.png">
+    <!-- 背景 -->
+    <script>document.documentElement.className = "js"; var supportsCssVars = function () { var e, t = document.createElement("style"); return t.innerHTML = "root: { --tmp-var: bold; }", document.head.appendChild(t), e = !!(window.CSS && window.CSS.supports && window.CSS.supports("font-weight", "var(--tmp-var)")), t.parentNode.removeChild(t), e }; supportsCssVars() || alert("Please view this demo in a modern browser that supports CSS Variables.");</script>
+    <link href="assets/css/vendors/vendors.css" rel="stylesheet">
+    <link href="assets/css/vendors/demo5.css" rel="stylesheet">
+
+    <style>
+        a {
+            color: #8ff;
+        }
+
+        #menu {
+            position: absolute;
+            bottom: 20px;
+            width: 100%;
+            text-align: center;
+        }
+
+        .caseShow {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 100%;
+        }
+
+        button {
+            color: rgba(127, 255, 255, 0.75);
+            background: transparent;
+            outline: 1px solid rgba(127, 255, 255, 0.75);
+            border: 0px;
+            padding: 5px 10px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: rgba(0, 255, 255, 0.5);
+        }
+
+        button:active {
+            color: #000000;
+            background-color: rgba(0, 255, 255, 0.75);
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 案例展示层 -->
+    <div class="caseShow">
+        <iframe width="100%" height="100%" style="height:350px" src="./imageSwatch/index.html" frameborder="0"></iframe>
+    </div>
+
+    <div id="menu">
+        <button id="threeD">前往3D视角</button>
+    </div>
+    <script type="text/javascript" src="js/vendors/vendors.js"></script>
+    <script type="text/javascript" src="js/vendors/demo5.js"></script>
+
+</body>
+
+</html>
