@@ -17,7 +17,8 @@ body {
   align-items: center;
   justify-content: center;
   width: 100vw;
-  height: 200px;
+  /* height: 200px; */
+  height: 150px;
   -webkit-perspective: 800px;
   perspective: 800px;
   -webkit-transform-style: preserve-3d;
@@ -32,7 +33,7 @@ body {
   display: flex;
   flex-flow: column;
   align-items: center;
-  justify-content: center;
+  /* justify-content: center; */
   border: 2px solid white;
   border-radius: 4px;
   position: relative;
@@ -45,22 +46,73 @@ body {
   transform-origin: center center;
   cursor: pointer;
   overflow: hidden;
-  background: radial-gradient(#cfaf7f, #6a4a0f);
+  background: radial-gradient(#194d6b, #051b28);
 }
-.frame .image {
+.frame .imageBox {
+  height: 150px;
+  width: 100%;
+  background-color: rgba(204, 204, 204, 0.259);
+}
+.frame .imageBox .image {
   display: block;
   position: relative;
   height: auto;
-  width: 90%;
+  width: 100%;
+  height: 150px;
   pointer-events: none;
 }
-.frame .info {
-  color: white;
-  text-shadow: 0 0 2px rgba(0, 0, 0, 0.8);
-  font-family: "Source Sans Pro", serif;
-  font-size: 1.2em;
-}
 
+.frame .info {
+  position: absolute;
+  box-sizing: border-box;
+  bottom: 0;
+  width: 100%;
+  height: 30px;
+  display: block;
+  color: white;
+  text-shadow: 0 0 2px rgb(0 0 0 / 80%);
+  font-family: "Source Sans Pro", serif;
+  font-size: 8px;
+  padding: 0 2px;
+  line-height: 1.2;
+  background-color: #182c4685;
+}
+.frame .openBtns {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: none;
+}
+.frame:hover .openBtns {
+  display: block;
+  display: flex;
+}
+.frame .openBtns .leftBtn,
+.frame .openBtns .rightBtn {
+  width: 30px;
+  height: 30px;
+  margin: 0 10px;
+  border-radius: 30px;
+  font-size: 8px;
+  line-height: 30px;
+  text-align: center;
+  cursor: default;
+  background-color: rgb(43, 44, 44);
+}
+.frame .openBtns .openleftBtn,
+.frame .openBtns .openrightBtn {
+  background-color: aqua;
+}
+.openleftBtn:hover,
+.openrightBtn:hover {
+  cursor: pointer !important;
+  background-color: #fff !important;
+  color: #333;
+}
 #codepen-link {
   position: absolute;
   bottom: 20px;
@@ -79,4 +131,30 @@ body {
 #codepen-link:hover {
   opacity: 0.8;
   box-shadow: 0 0 6px #000000;
+}
+
+.select {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.select_btn {
+  padding: 0 20px;
+  margin: 0 25px;
+  text-align: center;
+  line-height: 30px;
+  font-size: 18px;
+  cursor: pointer;
+  border: 1px solid rgb(34, 212, 201);
+}
+.select_btn:hover {
+  background-color: aqua;
+}
+.select_btn_stop {
+  pointer-events: none;
+  background-color: #ccc;
 }

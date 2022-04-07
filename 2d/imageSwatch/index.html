@@ -17,43 +17,200 @@
     <!-- 图片轮播 -->
     <div class="gallery-container">
         <div class="gallery">
-            <div class="frame">
-                <img class="image" src="assets/img/pumpernickel.png">
-                <div class="info">Pumpernickel</div>
-            </div>
-            <div class="frame">
-                <img class="image" src="assets/img/rye.png">
-                <div class="info">Rye</div>
-            </div>
-            <div class="frame">
-                <img class="image" src="assets/img/wheat.png">
-                <div class="info">Wheat</div>
-            </div>
-            <div class="frame">
-                <img class="image" src="assets/img/ciabatta.png">
-                <div class="info">Ciabatta</div>
-            </div>
-            <div class="frame">
-                <img class="image" src="assets/img/baguette.png">
-                <div class="info">Baguette</div>
-            </div>
-            <div class="frame">
-                <img class="image" src="assets/img/baguette.png">
-                <div class="info">Baguette</div>
-            </div>
-            <div class="frame">
-                <img class="image" src="assets/img/baguette.png">
-                <div class="info">Baguette</div>
-            </div>
-            <div class="frame">
-                <img class="image" src="assets/img/baguette.png">
-                <div class="info">Baguette</div>
-            </div>
-
+        </div>
+        <div class="select">
+            <div class="leftBtn select_btn select_btn_stop" id="select_leftBtn">《</div>
+            <div class="rightBtn select_btn " id="select_rightBtn">》</div>
         </div>
     </div>
-
     <script src="js/index.js"></script>
+    <script>
+        let index = 0 // 切换指针 v
+        let caseNum = 6 // 允许展示6个案例
+        let caseList = [
+            {
+                id: 0,
+                image: 'https://vkceyugu.cdn.bspapp.com/VKCEYUGU-d3ca2bf9-a00e-476d-9447-92a65ac1a70a/ab361cf3-0d19-425b-ac11-ca18b2194ee6.png',
+                info: '项目可视化展示首页',
+                projectUrl: 'http://yanyufanchen.gitee.io',
+                codeUrl: 'https://gitee.com/yanyufanchen/yanyufanchen'
+            },
+            {
+                id: 1,
+                image: 'https://vkceyugu.cdn.bspapp.com/VKCEYUGU-mydcloud-wangpeng/dbb6562b-9bda-41cb-b823-e1b9d27e84a5.png',
+                info: '基于Uniapp和UniCloud开发的全栈博客项目',
+                projectUrl: 'http://yanyufanchen.gitee.io/unimy_blog',
+                codeUrl: 'https://gitee.com/yanyufanchen/unimy_blog'
+            },
+            {
+                id: 2,
+                image: 'https://vkceyugu.cdn.bspapp.com/VKCEYUGU-d3ca2bf9-a00e-476d-9447-92a65ac1a70a/9523a871-b80b-41ef-a661-33e0e9c07ce3.png',
+                info: 'THREE模型查看器demo',
+                projectUrl: 'http://yanyufanchen.gitee.io/threejsmodelviewer',
+                codeUrl: 'https://gitee.com/yanyufanchen/ThreeJsModelViewer'
+            },
+            {
+                id: 3,
+                image: 'https://vkceyugu.cdn.bspapp.com/VKCEYUGU-mydcloud-wangpeng/734446b9-c89e-4d03-bb0f-b3e9de15bf0a.png',
+                info: '基于Vue和NodeJs开发的全栈博客项目',
+                projectUrl: '',
+                codeUrl: 'https://github.com/yanyufanchen/vue-blog-fullStack'
+            },
+            {
+                id: 4,
+                image: 'https://vkceyugu.cdn.bspapp.com/VKCEYUGU-mydcloud-wangpeng/90186dcd-0cd3-4e87-8505-f02c11e67927.png',
+                info: '基于React开发的豆瓣电影网',
+                projectUrl: 'https://yanyufanchen.gitee.io/react-douban-movie',
+                codeUrl: 'https://github.com/yanyufanchen/react-douban-movie'
+            },
+            {
+                id: 5,
+                image: 'https://vkceyugu.cdn.bspapp.com/VKCEYUGU-mydcloud-wangpeng/e65dcb23-4886-42d3-8d4c-8609d2bc088d.png',
+                info: 'vue图书馆后台管理系统',
+                projectUrl: '',
+                codeUrl: 'https://github.com/yanyufanchen/vue-library'
+            },
+            {
+                id: 6,
+                image: 'https://vkceyugu.cdn.bspapp.com/VKCEYUGU-mydcloud-wangpeng/37237123-d582-46de-ac17-7de1fa8818ba.png',
+                info: '电商项目的后台管理系统',
+                projectUrl: '',
+                codeUrl: 'https://github.com/yanyufanchen/Vue_shop'
+            },
+            {
+                id: 7,
+                image: 'https://vkceyugu.cdn.bspapp.com/VKCEYUGU-d3ca2bf9-a00e-476d-9447-92a65ac1a70a/65e6bae6-7f0d-4148-b0f3-2a225d64de7a.png',
+                info: 'web-云桌面',
+                projectUrl: 'http://yanyufanchen.gitee.io/wui-desktop',
+                codeUrl: 'https://gitee.com/yanyufanchen/wui-desktop'
+            },
+            {
+                id: 8,
+                image: 'https://vkceyugu.cdn.bspapp.com/VKCEYUGU-mydcloud-wangpeng/ef45c769-c188-4132-b328-789f64ed9614.png',
+                info: '基于Hexo的个人博客网站',
+                projectUrl: 'https://yanyufanchen.gitee.io/hexo_blog',
+                codeUrl: 'https://github.com/yanyufanchen/hexo_blog.git'
+            }
+        ]
+        let max = caseList.length - caseNum // 初始化后还剩max案例未展示
+        let gallery_innerHTML = ``
+
+        function createDom(item) {
+            let frame = document.createElement('div')
+            frame.className = 'frame'
+            let image = document.createElement('img')
+            image.className = 'image'
+            image.src = item.image
+            let info = document.createElement('div')
+            info.className = 'info'
+            info.innerText = item.info
+            let imageBox = document.createElement('div')
+            imageBox.className = 'imageBox'
+            imageBox.appendChild(image)
+            frame.appendChild(imageBox)
+            frame.appendChild(info)
+
+            // 按钮
+            let openBtns = document.createElement('div')
+            openBtns.className = 'openBtns'
+            let leftBtn = document.createElement('div')
+
+            leftBtn.innerText = '预览'
+            if (item.projectUrl) {
+                leftBtn.className = 'leftBtn openleftBtn'
+                leftBtn.onclick = () => {
+                    window.open(item.projectUrl)
+                }
+            } else {
+                leftBtn.className = 'leftBtn'
+            }
+
+            let rightBtn = document.createElement('div')
+            if (item.codeUrl) {
+                rightBtn.className = 'rightBtn openrightBtn'
+                rightBtn.onclick = () => {
+                    window.open(item.codeUrl)
+                }
+            } else {
+                rightBtn.className = 'rightBtn'
+            }
+            rightBtn.innerText = '源码'
+            openBtns.appendChild(leftBtn)
+            openBtns.appendChild(rightBtn)
+            frame.appendChild(openBtns)
+            return frame
+        }
+        caseList.forEach((item, index) => {
+            if (index < caseNum) {
+                document.getElementsByClassName('gallery')[0].appendChild(createDom(item))
+            }
+        })
+        let gallery = new window.Gallery();
+        // console.log(gallery, 'gallery')
+        // console.log(document.getElementsByClassName('openleftBtn'), '11111')
+        // document.getElementsByClassName('openleftBtn')[0].onclick = (e) => {
+
+        // }
+        // 事件
+        // 左
+        document.getElementById('select_leftBtn').onclick = () => {
+            // index==0禁止点击
+            if (index === 0) {
+                console.log('禁止点击')
+                document.getElementById('select_leftBtn').classList.add("select_btn_stop")
+                return
+            } else {
+                document.getElementById('select_leftBtn').classList.remove("select_btn_stop")
+            }
+
+            // 删除
+            let lastDom = document.getElementsByClassName('frame')[document.getElementsByClassName('frame').length - 1]
+            document.getElementsByClassName('gallery')[0].removeChild(lastDom)
+            // 添加
+            document.getElementsByClassName('gallery')[0].insertBefore(createDom(caseList[index - 1]), document.getElementsByClassName('frame')[0])
+            // 更新动画
+            gallery.initFrames()
+            index--
+            if (index === 0) {
+                console.log('禁止点击')
+                document.getElementById('select_leftBtn').classList.add("select_btn_stop")
+                return
+            }
+            if (index !== max) {
+                document.getElementById('select_rightBtn').classList.remove("select_btn_stop")
+            }
+        }
+        // 右 点击右，删掉第一项，添加最后一项
+        document.getElementById('select_rightBtn').onclick = () => {
+            // 点击右，index++
+            // 当index指针等于max的时候，代表案例已经展示完 则禁止点击
+            if (index === max) {
+                console.log('禁止点击')
+                document.getElementById('select_rightBtn').classList.add("select_btn_stop")
+                return
+            } else {
+                console.log('可以点击')
+                document.getElementById('select_rightBtn').classList.remove("select_btn_stop")
+            }
+            index++
+            // 删除
+            let lastDom = document.getElementsByClassName('frame')[0]
+            document.getElementsByClassName('gallery')[0].removeChild(lastDom)
+            // 添加
+            document.getElementsByClassName('gallery')[0].appendChild(createDom(caseList[index + caseNum - 1]))
+            // 更新动画
+            gallery.initFrames()
+            if (index !== 0) {
+                document.getElementById('select_leftBtn').classList.remove("select_btn_stop")
+            }
+            if (index === max) {
+                console.log('禁止点击')
+                document.getElementById('select_rightBtn').classList.add("select_btn_stop")
+                return
+            }
+        }   
+    </script>
+
 </body>
 
 </html>
