@@ -38,7 +38,9 @@
 
  <table>
     <tr>
-        <td><img src="docs/2d.png"></td>
+        <td>
+          正在开发中
+        </td>
     </tr>
   </table>
 
