@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel=icon href="./logo.png">
     <link rel="stylesheet" href="./index.css">
-    <title>可视化项目展示</title>
+    <title>凡尘-个人网站导航页</title>
 </head>
 
 <body>
@@ -17,11 +17,23 @@
             <div class="jiantou">
                 <img style="width:120px;height:70px;" src="./jiantou.png" alt="">
             </div>
-            <a class="s3-btn" href="./2d/index.html">2D</a>
-            <a class="s3-btn" href="./3d/index.html">3D</a>
+            <span class="s3-btn"  onclick="toNav('2D')">2D</span>
+            <span class="s3-btn" onclick="toNav('3D')">3D</span>
         </div>
     </div>
-
+    <script>
+        function toNav(e){
+            if(e==='2D'){
+                // window.open('https://static-d3ca2bf9-a00e-476d-9447-92a65ac1a70a.bspapp.com/index.html','_black')
+                window.open('2d/index.html','_black')
+            }
+            if(e==='3D'){
+                alert('正在开发中！！！')
+                // window.open('http://www.baidu.com','_black')
+            }
+            
+        }
+    </script>
     <script src="./index.js"></script>
 
 </body>
