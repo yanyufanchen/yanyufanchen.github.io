@@ -1,0 +1,9 @@
+node_modules
+dist
+
+.DS_store
+config.json
+.vscode
+pkg
+drop
+
